@@ -131,7 +131,7 @@ const Layout = () => {
             {location?.pathname === "/aviator" ? <AvitatorLayout component={<AviatorHome/>} /> : <div className="flex h-screen font-inter">
                 <div className="flex-1 bg-[#9195A3]"></div>
                 <div
-                    className={`${bgColor} shrink-0 bg-red flex flex-col h-screen overflow-hidden  w-full xsm:w-[400px] text-white `}
+                    className={`shrink-0 bg-[#05012b] flex flex-col h-screen overflow-hidden  w-full xsm:w-[400px] text-white `}
                 >
                     <div className={`h-[3.22rem]  w-full xsm:w-[400px] z-50 fixed top-0  ${headerDisplay}`}>
                         <Header />

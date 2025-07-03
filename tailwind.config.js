@@ -54,6 +54,7 @@ export default {
         bg2: "#FC7C76",
         bg3: "#6EA8F4",
         bg4: "#374992",
+        bg5: "#05012B",
         yellow: "#DD9138",
         green: "#17B15E",
         voilet: "#9B48DB",
@@ -69,10 +70,12 @@ export default {
         gray2: "#CDCFDD",
         /// my color for all globle bet 
         customred: "#FF0000",
-        customlightBlue: "#61A9FE",
+        customlightBlue: "#022C68",
         customdarkBlue: "#2B3270",
+        customdarkBluej: "#011341",
+
     ///   from-customlightbtn to-customdarkBluebtn
-        customlightbtn: "#29A3F3",
+        customlightbtn: "#00ECBE",
         customdarkBluebtn: "#297DF2",
         blackAviator1: "#0E0E0E",
         blackAviator2: "#1B1C1D",

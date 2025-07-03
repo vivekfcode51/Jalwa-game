@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import usawinlogo from "../assets/usawinlogo.png"
+import usawinlogo from "../assets/jalwa-logo.png"
+import usawinlogo1 from "../assets/jalwa-icon.png"
+import enIcon from "../assets/en-icon.png"
 import kefu from "../assets/icons/kefu.png"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -64,11 +66,11 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
   // console.log("myDetails",myDetails)
   return (
     <div className="font-inter">
-      {location?.pathname === "/" ? <div className='bg-bg4  px-2 py-0.5 flex justify-between items-center'>
-        <img className='w-12 h-12 rounded-full' src={usawinlogo} alt="logo not found" />
+      {location?.pathname === "/" ? <div className='bg-bg5  px-2 py-0.5 flex justify-between items-center'>
+        <img className='w-[8.4rem] h-10 rounded-full' src={usawinlogo1} alt="logo not found" />
         {!userId ? <div className=" gap-2 flex">
-          <Link to="/login" className="flex items-center border border-customlightbtn text-customlightbtn rounded-md text-xs py-1 px-4">Log in</Link>
-          {/* <Link to="/register" className="bg-gradient-to-r from-customlightbtn to-customdarkBluebtn flex items-center  text-white rounded-md text-xs py-0.5 px-4">Register</Link> */}
+          <Link to="/login" className="flex items-center border border-customlightbtn text-customlightbtn rounded-md font-semibold text-xs py-1 px-4">Log in</Link>
+          <Link to="/register" className="bg-gradient-to-b from-[#6fffc9] to-[#00b3bb] flex items-center text-black font-bold rounded-md text-xs py-0.5 px-4">Register</Link>
         </div> :
           <div className="flex items-center ">
             <div className="relative  h-8">
@@ -440,18 +442,27 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
                                                                                                             <p className='text-sm'></p>
 
                                                                                                           </div>
-                                                                                                            : location?.pathname === "/register" || location?.pathname === "/login" ? <div className='bg-gradient-to-l from-red to-redLight px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center'>
+                                                                                                            : location?.pathname === "/register" || location?.pathname === "/login" ? <div className='bg-[#05012B] px-3 pt-2 sm:pt-2 md:pt-2 pb-1 sm:pb-1 md:pb-2 flex justify-between items-center'>
                                                                                                               <Link to={-1}>
                                                                                                                 <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
                                                                                                               </Link>
-                                                                                                              <img className='w-12 h-12 rounded-full' src={usawinlogo} alt="logo not found" />
-                                                                                                              <p className='text-sm'></p>
+                                                                                                              <img className='w-[8.7rem] h-[2.4rem] rounded-full' src={usawinlogo} alt="logo not found" />
+                                                                                                              <div className="flex justify-center items-center gap-1 text-[#00ECBE]">
+                                                                                                                <img className='w-5 h-5 rounded-full' src={enIcon} alt="lang-icon"/>
+                                                                                                                <p>EN</p>
+                                                                                                              </div>
+                                                                                                              
 
                                                                                                             </div>
-                                                                                                              : location?.pathname === "/forgotPassword" ? <div className='bg-gradient-to-l from-red to-redLight px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center'>
+                                                                                                              : location?.pathname === "/forgotPassword" ? <div className='bg-[#05012B] px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center'>
                                                                                                                 <Link to={-1} >
                                                                                                                   <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
                                                                                                                 </Link>
+                                                                                                                <img className='w-[8.7rem] h-[2.4rem] rounded-full' src={usawinlogo} alt="logo not found" />
+                                                                                                                <div className="flex justify-center items-center gap-1 text-[#00ECBE]">
+                                                                                                                <img className='w-5 h-5 rounded-full' src={enIcon} alt="lang-icon"/>
+                                                                                                                <p>EN</p>
+                                                                                                              </div>
                                                                                                               </div>
                                                                                                                 : location?.pathname === "/wallet/transfer" ? <div className='text-white bg-gradient-to-r from-[#A8ECF3] to-[#C8F1F4] px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center'>
                                                                                                                   <Link to={-1} >

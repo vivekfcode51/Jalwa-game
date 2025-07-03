@@ -9,13 +9,14 @@ import apis from "../utils/apis";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Loader from "../reusable_component/Loader/Loader";
-import phoneUsa from "../assets/usaAsset/phone.png";
-import passwordUsa from "../assets/usaAsset/password.png";
+import phoneUsa from "../assets/usaAsset/phone1.png";
+import passwordUsa from "../assets/usaAsset/password1.png";
 import tikki from "../assets/usaAsset/tikki.png";
-import cutomerService from "../assets/usaAsset/custoservice.png";
-import email_tab from "../assets/usaAsset/email_tab.png";
-import email_tab_color from "../assets/usaAsset/email_tab_color.png";
-import phoneDesable from "../assets/usaAsset/phoneDesable.png";
+import cutomerService from "../assets/usaAsset/custoservice1.png";
+import email_tab from "../assets/usaAsset/email_tab1.png";
+import email_tab_color from "../assets/usaAsset/email_tab.png";
+import phoneDesable from "../assets/usaAsset/phone.png";
+import { FaCheck } from "react-icons/fa";
 const loginEndpoint = apis?.login;
 
 function Login() {
@@ -35,6 +36,10 @@ function Login() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleToggle = () => {
+    setToggleLogin(!togglelogin);
   };
 
   const MyProfileFn = async (userid) => {
@@ -109,16 +114,16 @@ function Login() {
     <>
       {loading && <Loader setLoading={setLoading} loading={loading} />}
       <section className="h-[100vh] font-inter w-full flex  flex-col items-start dark:text-white">
-        <div className="bg-gradient-to-l from-red to-redLight w-full pb-5">
-          <h1 className="text-sm font-bold font-inter px-10 mt-2">Log in</h1>
-          <p className="text-[10px] px-10 mt-2">
+        <div className="bg-[#011341] w-full pb-5 pt-2">
+          <h1 className="text-sm font-semibold font-inter px-6 mt-2">Log in</h1>
+          <p className="text-[9px] px-6 mt-2">
             Please login with your phone number or email{" "}
           </p>
-          <p className="text-[10px] px-10">
+          <p className="text-[9px] px-6">
             If you forget your password,please contact customer service{" "}
           </p>
         </div>
-        <div className="flex flex-col w-full items-center justify-center px-5 lg:py-0">
+        <div className="bg-[#05012b] flex flex-col w-full items-center justify-center px-5 lg:py-0">
           <div className=" w-full  text-white">
             <div className="flex w-full items-center justify-center">
               <div
@@ -126,11 +131,11 @@ function Login() {
                 className={`flex  flex-col items-center justify-center w-full py-2 border-b-[1px] text-redLight 
               ${
                 togglelogin === false
-                  ? "border-customdarkBluebtn"
+                  ? "border-[#00ECBE]"
                   : "border-customdarkBlue"
               } `}
               >
-                <div>
+                <div onClick={handleToggle}>
                   <img
                     className="w-6 h-6"
                     src={togglelogin === false ? phoneUsa : phoneDesable}
@@ -141,19 +146,19 @@ function Login() {
                 <div
                   className={`text-sm mt-2 ${
                     togglelogin === false
-                      ? "text-customlightBlue"
-                      : "text-white opacity-55"
+                      ? "text-[#00ECBE]"
+                      : "text-[#92A8E3]"
                   }`}
                 >
-                  Log in with phone
+                  phone number
                 </div>
               </div>
               <div
                 onClick={() => settogglelogin(true)}
-                className={`flex  flex-col items-center justify-center w-full py-2 border-b-[1px] text-redLight 
+                className={`flex  flex-col items-center justify-center w-full py-2 border-b-[1px] 
                ${
                  togglelogin === true
-                   ? "border-customdarkBluebtn "
+                   ? "border-[#00ECBE] "
                    : "border-customdarkBlue"
                } `}
               >
@@ -168,11 +173,11 @@ function Login() {
                 <div
                   className={`text-sm mt-2 ${
                     togglelogin === true
-                      ? "text-customlightBlue"
-                      : "text-white opacity-55"
+                      ? "text-[#00ECBE]"
+                      : "text-[#92A8E3]"
                   }`}
                 >
-                  Log in with email
+                  Email Login
                 </div>
               </div>
             </div>
@@ -191,7 +196,7 @@ function Login() {
                         htmlFor="mobile"
                         className=" text-sm text-white font-medium"
                       >
-                        Email{" "}
+                        Mail{" "}
                       </label>
                     </div>
                     <div className="relative flex items-center gap-2 ju">
@@ -200,7 +205,7 @@ function Login() {
                         name="email"
                         id="email"
                         placeholder="Please enter the email"
-                        className="col-span-[60%] bg-customdarkBlue text-[14px] focus:border-[0.5px] border-customlightBlue rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white"
+                        className="col-span-[60%] bg-[#011341] text-[14px] border-[1px] border-transparent focus:border-customlightBlue rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white transition-all duration-200 ease-in-out"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
@@ -217,18 +222,18 @@ function Login() {
                         htmlFor="mobile"
                         className=" text-sm text-white font-medium"
                       >
-                        Phone
+                        Phone number
                       </label>
                     </div>
                     <div className="relative flex items-center gap-2 ju">
                       <p
-                        className="bg-customdarkBlue w-[30%] text-white opacity-55 p-3 flex items-center justify-center rounded-md cursor-pointer"
+                        className="bg-[#011341] w-[30%] text-white opacity-55 p-3 flex items-center justify-center rounded-md cursor-pointer"
                         onClick={() => setIsModalOpen(!isModalOpen)}
                       >
                         {selectedCountryCode} <MdKeyboardArrowDown size={20} />
                       </p>
                       {isModalOpen && (
-                        <div className="absolute left-0 top-12 h-48 overflow-auto w-full bg-customdarkBlue shadow-lg border rounded-md z-10">
+                        <div className="absolute left-0 top-12 h-48 overflow-auto w-full bg-[#011341] shadow-lg border rounded-md z-10">
                           {countryCodeData
                             ?.sort((a, b) =>
                               a.phone_code === "+91"
@@ -259,7 +264,7 @@ function Login() {
                         name="mobile"
                         id="mobile"
                         placeholder="Please enter the phone number"
-                        className="col-span-[60%] bg-customdarkBlue text-[14px] focus:border-[0.5px] border-customlightBlue rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white"
+                        className="col-span-[60%] bg-[#011341] text-[14px] focus:border-[0.5px] border-customlightBlue rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white"
                         value={formData.mobile}
                         onChange={(e) => {
                           const value = e.target.value;
@@ -292,7 +297,7 @@ function Login() {
                     name="password"
                     id="password"
                     placeholder="Password"
-                    className="bg-customdarkBlue  mt-2 focus:border-[1px] text-[14px] border-customlightBlue rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white"
+                    className="bg-[#011341] mt-2 border-[1px] border-transparent focus:border-customlightBlue text-[14px] rounded-md outline-none w-full pl-3 p-3 placeholder:text-gray text-white transition-all duration-200 ease-in-out"
                     value={formData.password}
                     onChange={handleInputChange}
                     required
@@ -312,41 +317,41 @@ function Login() {
                     )}
                   </button>
                 </div>
+
                 <div className="flex items-center mt-4">
                   <div
                     onClick={() => setCheckAgreement(!checkAgreement)}
-                    className={`flex items-center cursor-pointer rounded-full ${
+                    className={`w-5 h-5 flex items-center justify-center cursor-pointer rounded-full transition-all duration-200 ${
                       checkAgreement
-                        ? "text-lightGray bg-white "
-                        : "text-chocolate"
+                        ? "bg-[#00ECBE] text-white"
+                        : "border border-[#c8c9cc] text-transparent"
                     }`}
                   >
-                    {checkAgreement ? (
-                      <img className="w-5 h-5" src={tikki} alt="df" />
-                    ) : (
-                      <div className="border-[1px] border-[#c8c9cc] p-2 rounded-full"></div>
-                    )}
+                    <FaCheck size={10} />
                   </div>
+
+                  {/* ✅ Static Label */}
                   <label
                     htmlFor="agree"
-                    className="text-white opacity-50 ml-2 text-xs sm:text-base md:text-xs"
+                    className="ml-2 text-[#92A8E3] opacity-50 text-xs sm:text-sm select-none"
                   >
-                    Remember Password
+                    Remember password
                   </label>
                 </div>
+
                 <div className="flex flex-col font-bold items-center justify-center">
                   <button
                     type="submit"
-                    className="w-[90%] font-bold tracking-[0.20333rem] py-2.5 
-                  rounded-full border-none bg-gradient-to-b from-customlightbtn to-customdarkBluebtn shadow-lg flex items-center justify-center"
+                    className="w-[90%] font-semibold tracking-[0.20333rem] py-1.5
+                  rounded-full border-none bg-[#3D4863] shadow-lg flex items-center justify-center text-blue-300"
                   >
                     Log in
                   </button>
-                  <button className="w-[90%] border border-customlightbtn mt-5 tracking-[2px] rounded-full p-2">
+                  <button className="w-[90%] border border-[#00ECBE] mt-5 tracking-[2px] rounded-full p-1.5">
                     {" "}
                     <Link
                       to="/register"
-                      className="font-bold text-sm hover:underline text-customlightbtn tracking-[0.20333rem] "
+                      className="font-semibold text-sm hover:underline text-[#00ECBE] tracking-[0.20333rem] "
                     >
                       Register
                     </Link>
@@ -360,7 +365,11 @@ function Login() {
               to="/forgotPassword"
               className="col-span-1 flex flex-col items-center justify-center"
             >
-              <img className="w-8 h-9" src={passwordUsa} alt="sd" />
+              <img
+                className="w-8 h-9 text-[#00ECBE]"
+                src={passwordUsa}
+                alt="sd"
+              />
               <p>Forgot Password</p>
             </Link>
             <Link
