@@ -2,7 +2,7 @@
 // const configModalTirangaWin = `${baseUrlTirangaWin}api/`
 // import REACT_APP_API_URL from ""
 // export const baseUrlUsaWin =import.meta.env.VITE_API_URL;
-export const baseUrlUsaWin = "https://root.jupitergames.world";
+export const baseUrlUsaWin = "https://demo.globalbet786.live";
 export const configModalUsaWin = `${baseUrlUsaWin}/api/`
 
 const apis = {

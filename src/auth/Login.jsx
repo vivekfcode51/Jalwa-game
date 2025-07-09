@@ -74,9 +74,9 @@ function Login() {
         password: formData.password,
         login_token: token,
       };
-      // console.log("payload",payload)
+      console.log("payload",payload)
       const response = await axios.post(loginEndpoint, payload);
-      // console.log("resresrers",response)
+      console.log("resresrers111",response)
       if (response?.data?.status === 200 || response?.data?.status === "200") {
         localStorage.setItem("login_token", token);
         await MyProfileFn(response?.data?.id);
@@ -94,7 +94,7 @@ function Login() {
   const countryCodeHandler = async () => {
     try {
       const res = await axios.post(apis.country);
-      // console.log("res", res)
+      console.log("reshhh", res)
       if (res?.data?.status === "success") {
         setCountryCodeData(res?.data?.data);
       }

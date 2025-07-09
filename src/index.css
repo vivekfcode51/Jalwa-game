@@ -137,3 +137,8 @@
 .no-spinner {
   -moz-appearance: textfield;
 }
+
+
+:root {
+  --f13b4d11-currentFontFamily: 'Roboto', 'Inter', sans-serif;
+}

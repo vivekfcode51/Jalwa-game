@@ -3,7 +3,7 @@ import depo_wallet from '../../assets/icons/depo_wallet.png'
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import plus from "../../assets/usaAsset/wallet/plus.png"
-import withdrawBg from "../../assets/usaAsset/wallet/withdrawBg.png"
+import withdrawBg from "../../assets/usaAsset/wallet/withdrawBg1.png"
 import axios from 'axios';
 import apis from '../../utils/apis'
 import { toast } from 'react-toastify';
@@ -12,7 +12,7 @@ import usdt_icon from '../../assets/images/usdt_icon.png';
 import Loader from '../../reusable_component/Loader/Loader';
 import camlenios from "../../assets/usaAsset/wallet/camlenios.png"
 import indianpay from "../../assets/usaAsset/wallet/indianpay.png"
-import payzaar from "../../assets/payzaar.png";
+import payzaar from "../../assets/usaAsset/wallet/chip.png";
 
 function Withdrawal() {
     const [loading, setloading] = useState(false);
@@ -199,9 +199,14 @@ function Withdrawal() {
     // console.log("cricket match",myDetails)
   const payMethod = [{
            image: payzaar,
-           name: "payzaar",
+           name: "BANK CARD",
            type: 0
        },
+       {
+        image: usdt_icon,
+        name: "USDT",
+        type: 2
+    },
     //    {
     //        image: indianpay,
     //        name: "UPI Payment",
@@ -224,13 +229,13 @@ function Withdrawal() {
                     backgroundPosition: "center",
                 }}
             >
-                <p className='flex items-center gap-4 mt-5'>
+                <p className='flex items-center gap-3 mt-5 text-[#05012B] font-inter'>
                     <p><img className='w-5 h-5' src={depo_wallet} alt="ds" /></p>
-                    <p>Availale Balance</p>
+                    <p >Availale Balance</p>
                 </p>
-                <p className='mt-2 text-2xl flex items-center gap-2 font-bold'>
+                <p className='mt-2 text-2xl flex items-center gap-2 font-bold text-[#05012B]'>
                     <p>₹ {myDetails?.data?.wallet + myDetails?.data?.third_party_wallet}</p>
-                    <HiArrowPathRoundedSquare onClick={() => profileDetails(userId)} className=' ' size={22} />
+                    <HiArrowPathRoundedSquare onClick={() => profileDetails(userId)} className='text-white' size={22} />
                 </p>
 
             </div>
@@ -239,11 +244,11 @@ function Withdrawal() {
                     <div
                         onClick={() => toggleModal(item?.type)}
                         key={i}
-                        className={`col-span-1 mb-2 p-4 rounded-md flex flex-col items-center text-xsm justify-evenly ${item?.type == activeModal ? "bg-[#374992] text-white" : "bg-redLight text-gray"
+                        className={`col-span-1 mb-2 p-4 rounded-md flex flex-col items-center text-xsm justify-evenly ${item?.type == activeModal ? " bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]" : "bg-redLight1 text-gray"
                             } shadow-md text-lightGray`}
                     >
-                        <img className={`w-${item?.type===2?20:80} h-14`} src={item.image} alt="UPI Payment" />
-                        <p className='text-nowrap'>{item?.name}</p>
+                        <img className={`w-${item?.type===2?20:30} h-14`} src={item.image} alt="UPI Payment" />
+                        <p className={`${item?.type == activeModal ? "text-nowrap text-[#05012B]" : "text-bg6" }`}>{item?.name}</p>
                     </div>
                 ))}
             </div>
@@ -252,20 +257,20 @@ function Withdrawal() {
                 <div className="mt-5 ">
                     <div className=''>
                         {viewAccountDetails && viewAccountDetails.length > 0 ?
-                            <div className='bg-redLight rounded-lg p-2'>
+                            <div className='bg-redLight1 rounded-lg p-2'>
                                 <div className='text-customlightbtn text-xs border-b-[1px] border-dotted py-2'>
-                                <p className='text-customlightbtn'> <b>Bank name:</b>&nbsp;<span className='text-white'>{viewAccountDetails[0]?.bank_name}</span>  </p>
-                                    <p className='text-customlightbtn'> <b>Branch name:</b>&nbsp;<span className='text-white'>{viewAccountDetails[0]?.branch}</span>  </p>
-                                    <p> <b>Recipient&apos;s Name:</b> &nbsp;<span className='text-white'>{viewAccountDetails[0]?.name}</span>  </p>
-                                    <p> <b>Account Number:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.account_number}</span>  </p>
-                                    <p> <b>IFSC:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.ifsc_code}</span>  </p>
-                                    <p> <b>UPI Id:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.upi_id}</span>  </p>
+                                <p className='text-customlightbtn'> <b>Bank name:</b>&nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.bank_name}</span>  </p>
+                                    <p className='text-customlightbtn'> <b>Branch name:</b>&nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.branch}</span>  </p>
+                                    <p> <b>Recipient&apos;s Name:</b> &nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.name}</span>  </p>
+                                    <p> <b>Account Number:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.account_number}</span>  </p>
+                                    <p> <b>IFSC:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.ifsc_code}</span>  </p>
+                                    <p> <b>UPI Id:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.upi_id}</span>  </p>
                                 </div>
-                                <Link to="/customerservices" className='text-xsm w-full flex items-end justify-end text-bg2'>Change bank card information</Link>
+                                <Link to="/customerservices" className='text-xsm w-full flex items-end justify-end text-[#DD9138]'>Change bank card information</Link>
                             </div>
                             :
                             <div className=''>
-                                <button className='w-full bg-redLight rounded-lg p-2'>
+                                <button className='w-full bg-redLight1 rounded-lg p-2'>
                                     <Link to="/wallet/withdrawal/addbankaccount" className="flex flex-col items-center rounded-l-full text-sm p-1" >
                                         <img className='w-12 h-12' src={plus} alt="sd" />
                                         <h3 className="text-xsm mt-2 text-blackLight flex items-center ">
@@ -282,10 +287,10 @@ function Withdrawal() {
                         }
                     </div>
 
-                    <div className='bg-redLight rounded-lg p-2 mt-3 mb-20'>
-                        {amountErrorCamlenio && <p className="text-red text-xs mt-2">{amountErrorCamlenio}</p>}
+                    <div className='bg-redLight1 rounded-lg p-2 mt-3 mb-20'>
+                        {amountErrorCamlenio && <p className="text-bg5 text-xs mt-2">{amountErrorCamlenio}</p>}
                         <div className=' rounded-md p-3 flex mt-3 items-center justify-center'>
-                            <div className="flex items-center bg-red w-full rounded-full text-sm p-2">
+                            <div className="flex items-center bg-bg5 w-full rounded-full text-sm p-2">
                                 <div className="w-8 flex items-center justify-center text-xl font-bold text-customlightbtn">₹</div>
                                 <div className="w-[1px] mx-2 flex items-center justify-center bg-lightGray h-5"></div>
                                 <input
@@ -297,32 +302,32 @@ function Withdrawal() {
                                     }}
                                     type="number"
                                     placeholder="Please enter the amount"
-                                    className="w-full p-1 bg-red border-none focus:outline-none text-customlightbtn placeholder:text-customlightbtn text-xsm"
+                                    className="w-full p-1 bg-bg5 border-none focus:outline-none text-customlightbtn placeholder:text-customlightbtn text-xsm"
                                 />
                             </div>
                         </div>
                         <button onClick={payoutWithdrawHandler} className={`mt-4 w-full ${upiAmount >= paymenLimts?.INR_minimum_withdraw ?
-                             "text-white bg-gradient-to-r from-customlightbtn to-customdarkBluebtn" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
+                             "text-bg5  bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
                             Withdraw
                         </button>
 
                         <div className='mt-10' >
-                            <ul className="px-2 py-4 my-2 bg-redLight   border-customlightbtn border-[0.5px] rounded-lg text-xs  text-white">
+                            <ul className="px-2 py-4 my-2 bg-bg5   border-[#022c68] border-[0.5px] rounded-lg text-xs  text-bg6">
                                 <li className="flex items-start">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Need to bet <p className='text-customlightbtn'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
+                                    Need to bet <p className='text-[#D23838]'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Withdraw time: <p className='text-customlightbtn'>&nbsp;00:00-23:59&nbsp;</p>
+                                    Withdraw time: <p className='text-[#D23838]'>&nbsp;00:00-23:59&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Inday Remaining Withdrawal Times  <p className='text-customlightbtn'>&nbsp;3&nbsp;</p>
+                                    Inday Remaining Withdrawal Times  <p className='text-[#D23838]'>&nbsp;3&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Withdrawal amount range  <p className='text-customlightbtn'>&nbsp;₹{paymenLimts?.INR_minimum_withdraw?.toFixed(2)} - ₹{paymenLimts?.INR_maximum_withdraw?.toFixed(2)}&nbsp;</p>
+                                    Withdrawal amount range  <p className='text-[#D23838]'>&nbsp;₹{paymenLimts?.INR_minimum_withdraw?.toFixed(2)} - ₹{paymenLimts?.INR_maximum_withdraw?.toFixed(2)}&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
@@ -341,21 +346,21 @@ function Withdrawal() {
                 <div className="mt-5 ">
                     <div className=''>
                         {viewAccountDetails && viewAccountDetails.length > 0 ?
-                            <div className='bg-redLight rounded-lg p-2'>
+                            <div className='bg-redLight1 rounded-lg p-2'>
                                 <div className='text-customlightbtn text-xs border-b-[1px] border-dotted py-2'>
-                                    <p className='text-customlightbtn'> <b>Bank name:</b>&nbsp;<span className='text-white'>{viewAccountDetails[0]?.bank_name}</span>  </p>
-                                    <p className='text-customlightbtn'> <b>Branch name:</b>&nbsp;<span className='text-white'>{viewAccountDetails[0]?.branch}</span>  </p>
-                                    <p> <b>Recipient&apos;s Name:</b> &nbsp;<span className='text-white'>{viewAccountDetails[0]?.name}</span>  </p>
-                                    <p> <b>Account Number:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.account_number}</span>  </p>
-                                    <p> <b>IFSC:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.ifsc_code}</span>  </p>
-                                    <p> <b>UPI Id:</b> &nbsp; <span className='text-white'>{viewAccountDetails[0]?.upi_id}</span>  </p>
+                                    <p className='text-customlightbtn'> <b>Bank name:</b>&nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.bank_name}</span>  </p>
+                                    <p className='text-customlightbtn'> <b>Branch name:</b>&nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.branch}</span>  </p>
+                                    <p> <b>Recipient&apos;s Name:</b> &nbsp;<span className='text-bg6'>{viewAccountDetails[0]?.name}</span>  </p>
+                                    <p> <b>Account Number:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.account_number}</span>  </p>
+                                    <p> <b>IFSC:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.ifsc_code}</span>  </p>
+                                    <p> <b>UPI Id:</b> &nbsp; <span className='text-bg6'>{viewAccountDetails[0]?.upi_id}</span>  </p>
 
                                 </div>
-                                <Link to="/customerservices" className='text-xsm w-full flex items-end justify-end text-bg2'>Change bank card information</Link>
+                                <Link to="/customerservices" className='text-xsm w-full flex items-end justify-end text-[#DD9138]'>Change bank card information</Link>
                             </div>
                             :
                             <div className=''>
-                                <button className='w-full bg-redLight rounded-lg p-2'>
+                                <button className='w-full bg-redLight1 rounded-lg p-2'>
                                     <Link to="/wallet/withdrawal/addbankaccount" className="flex flex-col items-center rounded-l-full text-sm p-1" >
                                         <img className='w-12 h-12' src={plus} alt="sd" />
                                         <h3 className="text-xsm mt-2 text-blackLight flex items-center ">
@@ -372,10 +377,10 @@ function Withdrawal() {
                         }
                     </div>
 
-                    <div className='bg-redLight rounded-lg p-2 mt-3 mb-20'>
-                        {amountError && <p className="text-red text-xs mt-2">{amountError}</p>}
+                    <div className='bg-redLight1 rounded-lg p-2 mt-3 mb-20'>
+                        {amountError && <p className="text-bg5 text-xs mt-2">{amountError}</p>}
                         <div className=' rounded-md p-3 flex mt-3 items-center justify-center'>
-                            <div className="flex items-center bg-red w-full rounded-full text-sm p-2">
+                            <div className="flex items-center bg-bg5 w-full rounded-full text-sm p-2">
                                 <div className="w-8 flex items-center justify-center text-xl font-bold text-customlightbtn">₹</div>
                                 <div className="w-[1px] mx-2 flex items-center justify-center bg-lightGray h-5"></div>
                                 <input
@@ -387,32 +392,32 @@ function Withdrawal() {
                                     }}
                                     type="number"
                                     placeholder="Please enter the amount"
-                                    className="w-full p-1 bg-red border-none focus:outline-none text-customlightbtn placeholder:text-customlightbtn text-xsm"
+                                    className="w-full p-1 bg-bg5 border-none focus:outline-none text-customlightbtn placeholder:text-customlightbtn text-xsm"
                                 />
                             </div>
                         </div>
                         <button onClick={payoutWithdrawHandler} className={`mt-4 w-full ${upiAmount >= paymenLimts?.INR_minimum_withdraw ?
-                             "text-white bg-gradient-to-r from-customlightbtn to-customdarkBluebtn" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
+                             "text-bg5 bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
                             Withdraw
                         </button>
 
                         <div className='mt-10' >
-                            <ul className="px-2 py-4 my-2 bg-redLight   border-customlightbtn border-[0.5px] rounded-lg text-xs  text-white">
+                            <ul className="px-2 py-4 my-2 bg-bg5 border-[#022c68] border-[0.5px] rounded-lg text-xs  text-bg6">
                                 <li className="flex items-start">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Need to bet <p className='text-customlightbtn'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
+                                    Need to bet <p className='text-[#D23838]'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Withdraw time: <p className='text-customlightbtn'>&nbsp;00:00-23:59&nbsp;</p>
+                                    Withdraw time: <p className='text-[#D23838]'>&nbsp;00:00-23:59&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Inday Remaining Withdrawal Times  <p className='text-customlightbtn'>&nbsp;3&nbsp;</p>
+                                    Inday Remaining Withdrawal Times  <p className='text-[#D23838]'>&nbsp;3&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Withdrawal amount range  <p className='text-customlightbtn'>&nbsp;₹{paymenLimts?.INR_minimum_withdraw?.toFixed(2)} - ₹{paymenLimts?.INR_maximum_withdraw?.toFixed(2)}&nbsp;</p>
+                                    Withdrawal amount range  <p className='text-[#D23838]'>&nbsp;₹{paymenLimts?.INR_minimum_withdraw?.toFixed(2)} - ₹{paymenLimts?.INR_maximum_withdraw?.toFixed(2)}&nbsp;</p>
                                 </li>
                                 <li className="flex items-start mt-2">
                                     <span className="text-customlightbtn  mr-2">◆</span>
@@ -465,7 +470,7 @@ function Withdrawal() {
                             }
                         </div> */}
                         <div className='bg-redLight rounded-lg pt-2 mt- mb-10'>
-                            {amountErrorUSDT && <p className="text-red text-xs mt-2">{amountErrorUSDT}</p>}
+                            {amountErrorUSDT && <p className="text-bg5 text-xs mt-2">{amountErrorUSDT}</p>}
                             <div className='bg-redLight rounded-md p-3 flex flex-col mt-3 items-center justify-center'>
                                 <div className="flex items-center bg-red w-full rounded-full text-sm p-2">
                                     <div className="w-8 flex items-center justify-center text-xl font-bold text-customlightbtn">$</div>
@@ -514,26 +519,26 @@ function Withdrawal() {
                                     />
                                 </div>
                             </div>
-                            <button onClick={payoutWithdrawHandler} className={`mt-4 w-full ${usdtAmount >= paymenLimts?.USDT_minimum_withdraw ? "text-white bg-gradient-to-r from-customlightbtn to-customdarkBluebtn" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
+                            <button onClick={payoutWithdrawHandler} className={`mt-4 w-full ${usdtAmount >= paymenLimts?.USDT_minimum_withdraw ? "text-bg5  bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]" : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"}   py-3 rounded-full border-none text-xsm `}>
                                 Withdraw
                             </button>
                             <div className='mt-10 mx-4' >
-                                <ul className="px-2 py-4 my-2  border-customlightbtn border-[0.5px]  rounded-lg text-xs text-white">
+                                <ul className="px-2 py-4 my-2  border-customlightbtn border-[0.5px] rounded-lg text-xs text-bg6">
                                 <li className="flex items-start">
                                     <span className="text-customlightbtn  mr-2">◆</span>
-                                    Need to bet <p className='text-customlightbtn'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
+                                    Need to bet <p className='text-[#D23838]'> &nbsp; ₹{myDetails?.data?.recharge}&nbsp;</p> to be able to withdraw.
                                 </li>
                                     <li className="flex items-start mt-2">
                                         <span className="text-customlightbtn  mr-2">◆</span>
-                                        Withdraw time: <p className='text-customlightbtn'>&nbsp;00:00-23:59&nbsp;</p>
+                                        Withdraw time: <p className='text-[#D23838]'>&nbsp;00:00-23:59&nbsp;</p>
                                     </li>
                                     <li className="flex items-start mt-2">
                                         <span className="text-customlightbtn  mr-2">◆</span>
-                                        Inday Remaining Withdrawal Times  <p className='text-customlightbtn'>&nbsp;3&nbsp;</p>
+                                        Inday Remaining Withdrawal Times  <p className='text-[#D23838]'>&nbsp;3&nbsp;</p>
                                     </li>
                                     <li className="flex items-start mt-2">
                                         <span className="text-customlightbtn  mr-2">◆</span>
-                                        Withdrawal amount range <p className='text-customlightbtn'>&nbsp;${paymenLimts?.USDT_minimum_withdraw} - ${paymenLimts?.USDT_maximum_withdraw}&nbsp;</p>
+                                        Withdrawal amount range <p className='text-[#D23838]'>&nbsp;${paymenLimts?.USDT_minimum_withdraw} - ${paymenLimts?.USDT_maximum_withdraw}&nbsp;</p>
                                     </li>
                                     <li className="flex items-start mt-2">
                                         <span className="text-customlightbtn  mr-2">◆</span>

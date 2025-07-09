@@ -213,16 +213,16 @@ function WithdrawalHistory() {
                 <div className="grid grid-cols-2 gap-3 mt-3 mx-3">
                     <button
                         onClick={() => handleModalFirst(!modalFirst)}
-                        className="bg-redLight text-white rounded-md text-xs font-bold py-4 px-2 flex justify-between items-center shadow-md"
+                        className="bg-redLight1 text-bg6 rounded-md text-xs font-bold py-4 px-2 flex justify-between items-center shadow-md"
                     >
                         <p>{modalFirstValue === 0 ? "All" : modalFirstValue === 1 ? "To be paid" : modalFirstValue === 2 ? "Paid" : modalFirstValue === 3 ? "Rejected" : ""}</p>
                         <p>
                             <IoIosArrowDown size={18} />
                         </p>
                     </button>
-                    <button className="bg-redLight text-white rounded-md text-xs font-bold py-4 px-2 flex justify-center items-center shadow-md">
+                    <button className="bg-redLight1 text-bg6 rounded-md text-xs font-bold py-4 px-2 flex justify-center items-center shadow-md">
                         <input
-                            className='input-white-icon outline-none bg-redLight'
+                            className='input-white-icon outline-none bg-redLight1'
                             onChange={(e) => setConfirmedDate(e.target.value)}
                             type="date"
                         />
@@ -241,12 +241,12 @@ function WithdrawalHistory() {
                                 return true;
                             })
                             ?.map((item, i) => (
-                                <div className="bg-redLight rounded-lg p-2 mt-2" key={i}>
+                                <div className="bg-redLight1 rounded-lg p-2 mt-2" key={i}>
                                     <div className="flex text-gray justify-between items-center">
-                                        <p className="bg-green text-white rounded-lg px-3 py-0.5">Withdraw</p>
-                                        <p className="text-xsm text-white font-semibold">
+                                        <p className="bg-[#D23838] text-white rounded-lg px-3 py-0.5">Withdraw</p>
+                                        <p className="text-xsm text-[#17B15E] font-semibold">
                                             {item.status === 1
-                                                ? "To be paid"
+                                                ? "Completed"
                                                 : item?.status === 2
                                                     ? "Paid"
                                                     : item?.status === 3
@@ -255,27 +255,27 @@ function WithdrawalHistory() {
                                         </p>
                                     </div>
                                     <div className="bg-border1 mt-3 w-full h-[1px]"></div>
-                                    <div className="flex mt-3 text-white justify-between items-center">
+                                    <div className="flex mt-3 text-bg6 justify-between items-center">
                                         <p className="text-xsm font-bold">Balance</p>
-                                        <p className="text-xsm font-semibold text-white">{item?.amount}</p>
+                                        <p className="text-xsm font-semibold text-bg6">{item?.amount}</p>
                                     </div>
-                                    <div className="flex mt-3 text-white justify-between items-center">
+                                    <div className="flex mt-3 text-bg6 justify-between items-center">
                                         <p className="text-xsm font-bold">Request Status</p>
-                                        <p className="text-xsm font-semibold text-white">{item?.status === 1 ? "Pending" : item?.status === 2 ? "Successfull" : item?.status === 3 ? "Rejected" : ""}</p>
+                                        <p className="text-xsm font-semibold text-bg6">{item?.status === 1 ? "Pending" : item?.status === 2 ? "Successfull" : item?.status === 3 ? "Rejected" : ""}</p>
                                     </div>
                                     {/* <div className="flex mt-4 text-white justify-between items-center">
                                         <p className="text-xsm font-bold">Type</p>
                                         <p className="text-xsm text-white font-semibold">{item?.type === 0 ? "USDT" :item?.type === 1? "Indian Pay":"Camlenio"}</p>
                                     </div> */}
-                                    <div className="flex mt-4 text-white justify-between items-center">
+                                    <div className="flex mt-4 text-bg6 justify-between items-center">
                                         <p className="text-xsm font-bold">Time</p>
-                                        <p className="text-xsm text-white font-semibold">
+                                        <p className="text-xsm text-bg6 font-semibold">
                                             {moment(item?.created_at).format("DD-MM-YYYY HH:mm:ss")}
                                         </p>
                                     </div>
-                                    <div className="flex my-4 text-white justify-between items-center">
+                                    <div className="flex my-4 text-bg6 justify-between items-center">
                                         <p className="text-xsm font-bold">Order Number</p>
-                                        <p className="text-xsm flex items-center text-white font-semibold">
+                                        <p className="text-xsm flex items-center text-bg6 font-semibold">
                                             {item?.order_id} &nbsp;
                                             <PiCopyLight onClick={() => handleCopyOrderId(item?.order_id)} size={15} />
                                         </p>

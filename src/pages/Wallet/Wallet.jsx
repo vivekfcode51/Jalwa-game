@@ -1,9 +1,9 @@
 import wallets from "../../assets/usaAsset/wallet/pro_wallet.png"
 import CircularIndicator from "../../reusable_component/CircularIndicator";
-import depositIcon from "../../assets/usaAsset/wallet/rechargeIcon.png"
-import rechargeHistory from "../../assets/usaAsset/wallet/rechargeHistory.png"
-import withdraw from "../../assets/usaAsset/wallet/widthdrawBlue.png"
-import withdrawHistory from "../../assets/usaAsset/wallet/withdrawHistory.png"
+import depositIcon from "../../assets/usaAsset/wallet/rechargeIcon1.png";
+import rechargeHistory from "../../assets/usaAsset/wallet/rechargeHistory1.png"
+import withdraw from "../../assets/usaAsset/wallet/widthdrawBlue1.png"
+import withdrawHistory from "../../assets/usaAsset/wallet/withdrawHistory1.png"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -133,27 +133,27 @@ const Wallet = () => {
       )}
 
       <div className="min-h-screen text-white  flex font-inter flex-col items-center ">
-        <div className="bg-gradient-to-l from-[#4673cf] to-[#374a93] flex flex-col justify-center items-center  text-white w-full px-6 pb-16 pt-5 text-center shadow-md">
+        <div className="bg-[#011341] flex flex-col justify-center items-center  text-white w-full px-6 pb-16 pt-5 text-center shadow-md">
           <img className="h-12 w-12" src={wallets} alt="cx" />
-          <p className="text-2xl font- mt-2">₹ {myDetails ? Number(myDetails?.data?.wallet + myDetails?.data?.third_party_wallet).toFixed(2) : "0.00"}</p>
-          <p className="text-xsm mt-1">Total Balance</p>
+          <p className="text-2xl font-roboto mt-2">₹ {myDetails ? Number(myDetails?.data?.wallet + myDetails?.data?.third_party_wallet).toFixed(2) : "0.00"}</p>
+          <p className="text-xsm mt-1 font-serif">Total Balance</p>
         </div>
-        <div className="px-4 -mt-8">
-          <div className="bg-customdarkBlue shadow-md rounded-lg px-2 pt-5 pb-20 mt-2 w-full ">
+        <div className="px-4 mt-2 mb-2">
+          <div className="bg-[#011341] shadow-md rounded-lg px-2 pt-5 pb-10 mt-2 w-full ">
             <div className="flex w-full text-black">
               <div className="flex w-[50%] flex-col justify-center items-center">
                 <CircularIndicator percentage={mainWalletPercentage} />
 
-                <p className="mt-2 text-white">₹ {myDetails ? Number(myDetails?.data?.wallet).toFixed(2) : "0.00"}</p>
-                <p className="bg-gradient-to-r from-[#43b5ec] to-[#759fde] bg-clip-text text-transparent text-xsm">Main wallet</p>
+                <p className="mt-2 text-[#E3EFFF] font-serif">₹ {myDetails ? Number(myDetails?.data?.wallet).toFixed(2) : "0.00"}</p>
+                <p className="text-[#E3EFFF] text-xsm font-serif">Main wallet</p>
               </div>
               <div className="flex w-[50%] flex-col justify-center items-center">
                 <CircularIndicator percentage={thirdPartyWalletPercentage} />
-                <p className="mt-2  text-white">₹ {myDetails ? Number(myDetails?.data?.third_party_wallet).toFixed(2) : "0.00"}</p>
-                <p className="bg-gradient-to-r from-[#43b5ec] to-[#759fde] bg-clip-text text-transparent text-xsm">Third party wallet</p>
+                <p className="mt-2 text-[#E3EFFF] font-serif">₹ {myDetails ? Number(myDetails?.data?.third_party_wallet).toFixed(2) : "0.00"}</p>
+                <p className="text-[#E3EFFF] text-xsm font-serif">Third party wallet</p>
               </div>
             </div>
-            <button onClick={fundTransferHandler} className="bg-gradient-to-l from-[#4673cf] to-[#374a93]  text-sm text-white w-full py-2 mt-4 rounded-full outline-none font-semibold">
+            <button onClick={fundTransferHandler} className="bg-gradient-to-b from-[#7AFEC3] to-[#02AFB6] text-sm font-serif text-[#05012B] w-full py-2 mt-4 rounded-full outline-none font-semibold">
               {showModal ? `Recalling ${timer}...` : "Main wallet transfer"}
             </button>
             <div className="grid grid-cols-4 gap-4 mt-6 max-w-md">
@@ -164,7 +164,7 @@ const Wallet = () => {
                     alt="Deposit"
                     className="w-16 h-16"
                   />
-                  <p className="text-xs mt-2 ">Deposit</p>
+                  <p className="text-[14px] mt-2 font-serif text-[#92A8E3]">Deposit</p>
                 </Link>
               </button>
               <button className="">
@@ -174,7 +174,7 @@ const Wallet = () => {
                     alt="Withdrawal"
                     className="w-16 h-16"
                   />
-                  <p className="text-xs mt-2">Withdraw</p>
+                  <p className="text-[14px] mt-2 font-serif text-[#92A8E3]">Withdraw</p>
                 </Link>
               </button>
               <button className="" >
@@ -184,7 +184,7 @@ const Wallet = () => {
                     alt="Deposit History"
                     className="w-16 h-16"
                   />
-                  <p className="text-xs mt-2">Deposit history</p>
+                  <p className="text-[14px] mt-2 font-serif text-[#92A8E3]">Deposit history</p>
                 </Link>
               </button>
               <button className="" >
@@ -194,26 +194,26 @@ const Wallet = () => {
                     alt="Withdrawal History"
                     className="w-16 h-16"
                   />
-                  <p className="text-xs mt-2">Withdrawal history</p>
+                  <p className="text-[14px] mt-2 font-serif text-[#92A8E3]">Withdrawal history</p>
                 </Link>
               </button>
             </div>
 
           </div>
         </div>
-        {/* <div className="w-full grid grid-cols-3 pl-4 mt-2 mb-20">
+        <div className="w-full grid grid-cols-3 pl-4 mt-2 mb-20">
           {array?.map((item, i) => (
             <div
               key={i}
               className={`col-span-1 mb-2 w-28 h-20 rounded-md flex flex-col items-center text-xsm
-                 justify-evenly ${i === 0 ? "bg-gradient-to-l from-[#4673cf] to-[#374a93] text-white" : "bg-customdarkBlue"
+                 justify-evenly ${i === 0 ? "bg-gradient-to-b from-[#7AFEC3] to-[#00b3bb] text-[#02AFB6]" : "bg-[#011341]"
                 } shadow-md text-lightGray`}
             >
-              <p>₹ {item?.amount}</p>
-              <p>{item?.game}</p>
+              <p className={`${i === 0 ? "text-[#05012B] font-serif" : "text-[#92A8E3] font-serif"}`}>₹ {item?.amount}</p>
+              <p className={`${i === 0 ? "text-[#05012B] font-serif" : "text-[#d9d9d91a] font-serif"}`}>{item?.game}</p>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </>
   );

@@ -16,8 +16,8 @@ const CircularIndicator = ({ percentage = 0, color }) => {
         {/* Define Gradient */}
         <defs>
           <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#4673cf" />  {/* Red */}
-            <stop offset="100%" stopColor="#2AA6F3" /> {/* Pink */}
+            <stop offset="0%" stopColor="#00ECBE" />  {/* Red */}
+            <stop offset="100%" stopColor="#00ECBE" /> {/* Pink */}
           </linearGradient>
         </defs>
 
@@ -27,7 +27,7 @@ const CircularIndicator = ({ percentage = 0, color }) => {
           cy="50"
           r={circleRadius}
           fill="none"
-          stroke="#606490" /* Tailwind gray-200 */
+          stroke="#001C54" /* Tailwind gray-200 */
           strokeWidth="7"
         />
         

@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import apis from "../../utils/apis";
-import withdrawBg from "../../assets/usaAsset/wallet/withdrawBg.png";
+import withdrawBg from "../../assets/usaAsset/wallet/withdrawBg1.png";
 import Loader from "../../reusable_component/Loader/Loader";
 import { data } from "autoprefixer";
 
@@ -328,9 +328,9 @@ function Deposit() {
           <p>
             <img className="w-5 h-5" src={depo_wallet} alt="ds" />
           </p>
-          <p>Balance</p>
+          <p className="text-[#05012B]">Balance</p>
         </p>
-        <p className="mt-2 text-2xl flex items-center gap-4 ml-5 font-bold">
+        <p className="mt-2 text-2xl flex items-center gap-4 ml-5 font-bold text-[#05012B]">
           <p>
             ₹{" "}
             {myDetails
@@ -353,7 +353,7 @@ function Deposit() {
               key={i}
               className={`col-span-1 mb-2 p-4 rounded-md flex flex-col items-center text-xsm justify-evenly ${
                 item?.type == activeModal
-                  ? "bg-[#2B3270] text-white"
+                  ? "bg-[#011341] text-white"
                   : "bg-customdarkBlue text-gray"
               } shadow-md text-lightGray`}
             >
@@ -369,7 +369,7 @@ function Deposit() {
       {activeModal === 0 && (
         <>
           <div className="mt-5 ">
-            <div className="bg-customdarkBlue shadow-lg rounded-lg p-2">
+            <div className="bg-customdarkBluej shadow-lg rounded-lg p-2">
               <h3 className="text-lg font-semibold text-bg2 flex items-center ">
                 <img className="w-6 h-6" src={save_wallet} alt="sd" /> &nbsp;{" "}
                 <p className="text-white">Deposit amount </p>
@@ -418,7 +418,7 @@ function Deposit() {
                 className={`mt-4 w-full ${
                     upiAmount >= paymenLimts?.INR_minimum_deposit &&
                     upiAmount <= paymenLimts?.INR_maximum_deposit
-                    ? "text-white bg-gradient-to-r from-customlightbtn to-customdarkBluebtn"
+                    ? "text-white bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]"
                     : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"
                 } py-3 rounded-full border-none text-xsm`}
                 >
@@ -427,7 +427,7 @@ function Deposit() {
 
             </div>
 
-            <div className="bg-customdarkBlue shadow-lg rounded-lg p-2 my-10">
+            <div className="bg-customdarkBluej shadow-lg rounded-lg p-2 my-10">
               <div className="flex items-center gap-3 font-bold">
                 <img className="w-8 h-8" src={rechargeIns} alt="dfd" />
                 <p className="text-white">Recharge instructions</p>

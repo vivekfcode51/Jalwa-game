@@ -3,7 +3,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import usaserviceIcon from "./assets/icons/usaServiceIcon.png";
+import usaserviceIcon from "./assets/icons/usaServiceIcon1.png";
 import AvitatorLayout from "./pages/AviatorGame/AvitatorLayout";
 import AviatorHome from "./pages/AviatorGame/AviatorHome";
 
@@ -131,9 +131,9 @@ const Layout = () => {
             {location?.pathname === "/aviator" ? <AvitatorLayout component={<AviatorHome/>} /> : <div className="flex h-screen font-inter">
                 <div className="flex-1 bg-[#9195A3]"></div>
                 <div
-                    className={`shrink-0 bg-[#05012b] flex flex-col h-screen overflow-hidden  w-full xsm:w-[400px] text-white `}
+                    className={`shrink-0 bg-[#05012b] flex flex-col h-screen overflow-hidden  w-full xsm:w-[450px] text-white `}
                 >
-                    <div className={`h-[3.22rem]  w-full xsm:w-[400px] z-50 fixed top-0  ${headerDisplay}`}>
+                    <div className={`h-[3.22rem]  w-full xsm:w-[450px] z-50 fixed top-0  ${headerDisplay}`}>
                         <Header />
                     </div>
                     <div
@@ -142,7 +142,7 @@ const Layout = () => {
                         <Outlet />
                     </div>
                     <div
-                        className={`fixed bottom-0 z-40  w-full xsm:w-[400px] bg-transparent ${footerDisplay}`}
+                        className={`fixed bottom-0 z-40  w-full xsm:w-[450px] bg-transparent ${footerDisplay}`}
                     >
                         <Footer />
                     </div>
