@@ -342,7 +342,7 @@ function Login() {
                 <div className="flex flex-col font-bold items-center justify-center">
                   <button
                     type="submit"
-                    className="w-[90%] font-semibold tracking-[0.20333rem] py-1.5
+                    className="w-[90%] font-semibold tracking-[0.20333rem] py-2
                   rounded-full border-none bg-[#3D4863] shadow-lg flex items-center justify-center text-blue-300"
                   >
                     Log in

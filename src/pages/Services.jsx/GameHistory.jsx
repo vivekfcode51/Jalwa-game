@@ -55,7 +55,7 @@ function GameHistory() {
         <div className="flex gap-1.5 text-xs ">
           <div
             className={` py-1.5 flex-shrink-0 flex items-center justify-center shadow-lg rounded-full ${activeModal === 1 ?
-               "bg-gradient-to-l from-customlightbtn to-customdarkBluebtn text-white" : "bg-redLight text-lightGray"
+               "bg-gradient-to-l from-[#7AFEC3] to-[#02AFB6] text-bg5" : "bg-redLight1 text-bg6"
               }  px-5 cursor-pointer`}
             onClick={() => toggleModal(1)}
           >
@@ -63,7 +63,7 @@ function GameHistory() {
           </div>
           <div
             className={`w- py-1.5 flex-shrink-0 flex items-center justify-center shadow-lg rounded-full ${activeModal === 2 ?
-               "bg-gradient-to-l from-customlightbtn to-customdarkBluebtn text-white" : "bg-redLight text-lightGray"
+               "bg-gradient-to-l from-[#7AFEC3] to-[#02AFB6] text-bg5" : "bg-redLight1 text-bg6"
               }  px-5 cursor-pointer`}
             onClick={() => toggleModal(2)}
           >
@@ -72,7 +72,7 @@ function GameHistory() {
 
           <div
             className={`w- py-1.5 flex-shrink-0 flex items-center justify-center shadow-lg rounded-full ${activeModal === 3 ? 
-              "bg-gradient-to-l from-customlightbtn to-customdarkBluebtn text-white" : "bg-redLight text-lightGray"
+              "bg-gradient-to-l from-[#7AFEC3] to-[#02AFB6] text-bg5" : "bg-redLight1 text-bg6"
               }  px-5 cursor-pointer`}
             onClick={() => toggleModal(3)}
           >
@@ -80,7 +80,7 @@ function GameHistory() {
           </div>
           <div
             className={`w- py-1.5 flex-shrink-0 flex items-center justify-center shadow-lg rounded-full ${activeModal === 4 ? 
-              "bg-gradient-to-l from-customlightbtn to-customdarkBluebtn text-white" : "bg-redLight text-lightGray"
+              "bg-gradient-to-l from-[#7AFEC3] to-[#02AFB6] text-white" : "bg-redLight1 text-bg6"
               }  px-5 cursor-pointer`}
             onClick={() => toggleModal(4)}
           >
@@ -89,13 +89,13 @@ function GameHistory() {
         </div>
       </div>
       <div className='mt-3 px-3'>
-        <div className='h-32 rounded-lg flex flex-col items-center justify-center bg-redLight'>
-          <p className='font-bold text-xl text-yellow'>{gameStats?.status === 200 ? gameStats?.grand_total : "0.00"}</p>
-          <p className='mt-3'>Total bet</p>
+        <div className='h-32 rounded-lg flex flex-col items-center justify-center bg-redLight1'>
+          <p className='font-bold text-xl text-yellow'>{gameStats?.status === 200 ? gameStats?.grand_total : "₹0.00"}</p>
+          <p className='mt-3 text-bg6'>Total bet</p>
         </div>
       </div>
       <div className='px-3 mt-3 '>
-        <div className='rounded-lg p-3  bg-redLight text-white'>
+        <div className='rounded-lg p-3  bg-redLight1 text-bg6'>
           {gameKeys.map(key => {
             const title = key.replace('_data', '');
             const data = gameStats[key];
@@ -103,7 +103,7 @@ function GameHistory() {
               <div key={key} className="">
                 <div className="flex items-center gap-2">
                   <img className="w-8 h-8" src={gameStattic} alt="sd" />
-                  <p className="text-white text-sm font-bold capitalize">{title}</p>
+                  <p className="text-[#E3EFFF] text-sm font-bold capitalize">{title}</p>
                 </div>
                 <div className="flex ml-10 text-[15px] items-center justify-between mt-2.5 gap-2">
                   <p>Total bet</p>

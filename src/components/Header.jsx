@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 
-import usawinlogo from "../assets/jalwa-logo.png";
+import usawinlogo from "../assets/jalwa-icon.png";
 import usawinlogo1 from "../assets/jalwa-icon.png";
 import enIcon from "../assets/en-icon.png";
 import kefu from "../assets/icons/kefu.png";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import awardRecord from "../assets/icons/awardRecord.png";
-import gift from "../assets/images/gift.png";
+import gift from "../assets/images/gift1.png";
 import rechargeHistory from "../assets/icons/rechargeHistory.png";
 import bethistory from "../assets/Andarbahar/bethistory.png";
 import filter from "../assets/usaAsset/promotion/filter.png";
@@ -105,34 +105,34 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           )}
         </div>
       ) : location?.pathname === "/activity" ? (
-        <div className="w-full h-[3.22rem] bg-gradient-to-r from-red to-redLight flex items-center justify-center">
+        <div className="w-full h-[3.22rem] bg-bg5 flex items-center justify-center">
           <img
-            className="w-12 h-12 rounded-full"
+            className="w-[8rem] h-12 rounded-full"
             src={usawinlogo}
             alt="logo not found"
           />
         </div>
       ) : location?.pathname === "/activity/invitationbonus" ? (
-        <div className="bg-gradient-to-r from-red to-redLight h-[3.22rem] flex items-center justify-between">
+        <div className="bg-bg5 h-[3.22rem] flex items-center justify-between">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Invitation bonus</p>
           <div></div>
         </div>
       ) : location?.pathname === "/activity/details" ? (
-        <div className="bg-gradient-to-r from-red to-redLight h-[3.22rem] flex items-center justify-between">
+        <div className="bg-bg5 h-[3.22rem] flex items-center justify-between">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Activity Details</p>
           <div></div>
         </div>
       ) : location?.pathname === "/activity/award" ? (
-        <header className="h-[3.22rem] bg-gradient-to-l from-red to-redLight px-3">
+        <header className="h-[3.22rem] bg-bg5 px-3">
           <div className="flex items-center justify-between">
             <Link to={-1}>
-              <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+              <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
             </Link>
             <Link
               to="/activity/award/collectionrecord"
@@ -147,22 +147,22 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
         "/activity/invitationbonus/invitationrewardrule" ? (
         <div className="bg-[#374992]  h-[3.22rem] flex items-center justify-between ">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="text-3xl text-white" />
+            <MdKeyboardArrowLeft className="text-3xl text-[#E3EFFF]" />
           </Link>
-          <p className="text-sm text-white">Invitation reward rules</p>
+          <p className="text-sm text-[#E3EFFF]">Invitation reward rules</p>
           <div></div>
         </div>
       ) : location?.pathname === "/allFirstDepositPlans" ? (
         <div className="bg-[#374992]  h-[3.22rem] flex items-center justify-between ">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="text-3xl text-white" />
+            <MdKeyboardArrowLeft className="text-3xl text-[#E3EFFF]" />
           </Link>
-          <p className="text-sm text-white">First deposit bonus</p>
+          <p className="text-sm text-[#E3EFFF]">First deposit bonus</p>
           <div></div>
         </div>
       ) : location?.pathname ===
         "/activity/invitationbonus/invitationrecord" ? (
-        <div className="bg-[#374992] h-[3.22rem] flex items-center justify-between text-white">
+        <div className="bg-[#374992] h-[3.22rem] flex items-center justify-between text-[#E3EFFF]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-4xl" />
           </Link>
@@ -170,7 +170,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div></div>
         </div>
       ) : location?.pathname === "/activity/rebate" ? (
-        <div className="flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -178,30 +178,29 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div></div>
         </div>
       ) : location?.pathname === "/activity/superJackpot" ? (
-        <div className="flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
           <p className="text-sm">Super Jackpot</p>
-          <div></div>
         </div>
       ) : location?.pathname === "/activity/gifts" ? (
-        <header className="bg-gradient-to-l from-red to-redLight px-3">
+        <header className="bg-bg5 px-3 h-[3.22rem]">
           <div className="flex items-center justify-between">
             <Link to={-1}>
-              <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+              <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
             </Link>
-            <p className="text-sm">Gift</p>
+            <p className="text-sm lg:text-[18px] font-semibold text-[#E3EFFF]">Gift</p>
             <p className="text-sm"></p>
           </div>
-          <div className="mt-10">
+          <div className="mt-6">
             <img src={gift} alt="sd" />
           </div>
         </header>
       ) : location?.pathname === "/activity/attendance" ? (
         <div className="flex  items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Attendance</p>
           <div></div>
@@ -209,7 +208,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/activity/gamerule" ? (
         <div className="flex  items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Game Rules</p>
           <div></div>
@@ -217,13 +216,13 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/activity/attendacehistory" ? (
         <div className="flex  items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Attendance History</p>
           <div></div>
         </div>
       ) : location?.pathname === "/promotion" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <p></p>
           <p className="text-sm">Agency</p>
           <Link to="/promotion/newSuboridnate">
@@ -231,7 +230,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           </Link>
         </div>
       ) : location?.pathname === "/promotion/newSuboridnate" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -239,7 +238,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div></div>
         </div>
       ) : location?.pathname === "/promotion/subordinatedata" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -247,7 +246,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div> </div>
         </div>
       ) : location?.pathname === "/promotion/commissiondetail" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -255,7 +254,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div> </div>
         </div>
       ) : location?.pathname === "/promotion/invitationrules" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -263,7 +262,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <div> </div>
         </div>
       ) : location?.pathname === "/promotion/rebateratio" ? (
-        <div className="px-3 flex items-center justify-between text-white bg-[#374992]  h-[3.22rem]">
+        <div className="px-3 flex items-center justify-between text-[#E3EFFF] bg-[#374992]  h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -274,11 +273,11 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
         <div className="relative px-3 flex items-center justify-between bg-bg5 h-[3.22rem]">
         {/* Left Icon */}
         <Link to={-1}>
-          <MdKeyboardArrowLeft className="text-3xl text-white" />
+          <MdKeyboardArrowLeft className="text-3xl text-[#E3EFFF]" />
         </Link>
 
         {/* Center Title */}
-        <p className="absolute left-1/2 -translate-x-1/2 text-sm text-white font-medium">
+        <p className="absolute left-1/2 -translate-x-1/2 text-sm text-[#E3EFFF] font-medium">
           Wallet
         </p>
       </div>
@@ -293,7 +292,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/wallet/deposit" ? (
         <div className="flex px-2 items-center justify-between bg-bg5  text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-3xl lg:text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-3xl lg:text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm lg:text-[18px]">Deposit</p>
           <Link to="wallet/deposithistory" className="text-xsm lg:text-[18px]">
@@ -311,7 +310,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           </Link>
         </div>
       ) : location?.pathname === "/wallet/deposithistory" ? (
-        <div className="flex px-2 items-center justify-between bg-[#374992]  text-[#E3EFFF] h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5  text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -344,7 +343,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
         </div>
       ) : location?.pathname ===
         "/wallet/withdrawal/addbankaccount/selectbank" ? (
-        <div className="flex px-2 items-center justify-between bg-bg5 text-white h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="text-3xl" />
           </Link>
@@ -352,7 +351,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/wallet/withdrawal/addusdtwalletaddress" ? (
-        <div className="flex px-2 items-center justify-between bg-bg5 text-white h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
             <MdKeyboardArrowLeft className="font-extrabold text-3xl" />
           </Link>
@@ -362,23 +361,23 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/notifications" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Notification</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/vip" ? (
-        <div className="flex px-2 items-center justify-between bg-customdarkBlue h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">VIP</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/gamehistory" ? (
-        <div className="flex px-2 items-center justify-between bg-[#374992]  text-white h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-3xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-3xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Game statistics</p>
           <p className="text-xs"></p>
@@ -386,23 +385,23 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/alltransactionhistory" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Transaction History</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/setting" ? (
-        <div className="flex px-2 items-center justify-between bg-customdarkBlue h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Settings Center</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/changepassword" ? (
-        <div className="flex px-2 items-center justify-between bg-[#374992]  text-white h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5  text-[#E3EFFF] h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-3xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-3xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Change login Password</p>
           <p className="text-xs"></p>
@@ -410,7 +409,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/bindmail" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Bind Mailbox</p>
           <p className="text-xs"></p>
@@ -418,31 +417,31 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/feedback" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Feedback</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/customerservices" ? (
-        <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Customer Service</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/beginnersguide" ? (
-        <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Beginners Guide</p>
           <p className="text-xs"></p>
         </div>
       ) : location?.pathname === "/aboutus" ? (
-        <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
+        <div className="flex px-2 items-center justify-between bg-bg5 h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">About Us</p>
           <p className="text-xs"></p>
@@ -450,7 +449,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/aboutus/child" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">About Us</p>
           <p className="text-xs"></p>
@@ -458,7 +457,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/aboutus/confidential" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Confidentiality Agreement</p>
           <p className="text-xs"></p>
@@ -466,7 +465,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/aboutus/risk" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Risk Disclosure Agreement</p>
           <p className="text-xs"></p>
@@ -474,7 +473,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/aboutus/tc" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Terms & Condition</p>
           <p className="text-xs"></p>
@@ -482,7 +481,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/aboutus/faqs" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">TirangaWin FAQs</p>
           <p className="text-xs"></p>
@@ -490,7 +489,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/changeavatar" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Change Avatar</p>
           <Link to="#" className="col-span-1 bg-">
@@ -500,7 +499,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/dragonTiger" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Dragon Tiger</p>
           <Link to="/dragonTiger/history" className="col-span-1 bg-">
@@ -510,7 +509,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/dragonTiger/history" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Dragon Tiger</p>
           <p className="text-sm"></p>
@@ -518,7 +517,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/andarbahar" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">In Out</p>
           <Link
@@ -531,7 +530,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/andarbahar/history" ? (
         <div className="flex px-2 items-center justify-between bg-gradient-to-l from-red to-redLight h-[3.22rem]">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p className="text-sm">Andar Bahar</p>
           <p className="text-sm"></p>
@@ -540,7 +539,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
         location?.pathname === "/login" ? (
         <div className="bg-[#05012B] px-3 pt-2 sm:pt-2 md:pt-2 pb-1 sm:pb-1 md:pb-2 flex justify-between items-center">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <img
             className="w-[8.7rem] h-[2.4rem] rounded-full"
@@ -559,7 +558,7 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
       ) : location?.pathname === "/forgotPassword" ? (
         <div className="bg-[#05012B] px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <img
             className="w-[8.7rem] h-[2.4rem] rounded-full"
@@ -576,9 +575,9 @@ function Header({ audioRef, isAudioOn, setIsAudioOn }) {
           </div>
         </div>
       ) : location?.pathname === "/wallet/transfer" ? (
-        <div className="text-white bg-gradient-to-r from-[#A8ECF3] to-[#C8F1F4] px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center">
+        <div className="text-[#E3EFFF] bg-gradient-to-r from-[#A8ECF3] to-[#C8F1F4] px-3 pt-2 sm:pt-2 md:pt-2 pb-2 sm:pb-1 md:pb-2 flex justify-between items-center">
           <Link to={-1}>
-            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-white" />
+            <MdKeyboardArrowLeft className="font-extrabold text-4xl text-[#E3EFFF]" />
           </Link>
           <p>Fund Transfer</p>
           <Link to="/customerservices">

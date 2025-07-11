@@ -372,7 +372,7 @@ function Deposit() {
             <div className="bg-customdarkBluej shadow-lg rounded-lg p-2">
               <h3 className="text-lg font-semibold text-bg2 flex items-center ">
                 <img className="w-6 h-6" src={save_wallet} alt="sd" /> &nbsp;{" "}
-                <p className="text-white">Deposit amount </p>
+                <p className="text-[#E3EFFF]">Deposit amount </p>
               </h3>
               {/* <div className='grid grid-cols-3 mt-3 gap-3'>
                             {depositArray.map((item, i) => (
@@ -388,7 +388,7 @@ function Deposit() {
               {amountError && (
                 <p className="text-bg2 text-xs mt-2">{amountError}</p>
               )}
-              <div className="flex items-center bg-red rounded-full text-sm mt-3 p-1">
+              <div className="flex items-center bg-bg5 rounded-full text-sm mt-3 p-1">
                 <div className="w-8 flex items-center justify-center text-customlightbtn text-2xl font-bold"></div>
                 <input
                   value={upiAmount == 0 ? "" : upiAmount}
@@ -399,7 +399,7 @@ function Deposit() {
                   }}
                   type="number"
                   placeholder="Please enter the amount"
-                  className="w-full p-1 bg-red border-none focus:outline-none text-white placeholder:text-xsm"
+                  className="w-full p-1 bg-bg5 border-none focus:outline-none text-[E3EFFF] placeholder:text-xsm"
                 />
 
                 <button
@@ -418,7 +418,7 @@ function Deposit() {
                 className={`mt-4 w-full ${
                     upiAmount >= paymenLimts?.INR_minimum_deposit &&
                     upiAmount <= paymenLimts?.INR_maximum_deposit
-                    ? "text-white bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]"
+                    ? "text-bg5 bg-gradient-to-b from-[#6fffc9] to-[#00b3bb]"
                     : "bg-gradient-to-l from-[#cfd1de] to-[#c7c9d9] text-gray"
                 } py-3 rounded-full border-none text-xsm`}
                 >
@@ -430,10 +430,10 @@ function Deposit() {
             <div className="bg-customdarkBluej shadow-lg rounded-lg p-2 my-10">
               <div className="flex items-center gap-3 font-bold">
                 <img className="w-8 h-8" src={rechargeIns} alt="dfd" />
-                <p className="text-white">Recharge instructions</p>
+                <p className="text-[#E3EFFF]">Recharge instructions</p>
               </div>
               <div className="">
-                <ul className="px-2 py-4 my-2 border-redLight border-thin rounded-lg text-xsm text-lightGray">
+                <ul className="px-2 py-4 my-2 border-redLight border-thin rounded-lg text-xsm text-bg6">
                   <li className="flex items-start">
                     <span className="text-customlightbtn font-bold mr-2">
                       ◆

@@ -56,6 +56,7 @@ export default {
         bg4: "#374992",
         bg5: "#05012B",
         bg6: "#92A8E3",
+        bg7: "#E3EFFF",
         yellow: "#DD9138",
         green: "#17B15E",
         voilet: "#9B48DB",
@@ -68,6 +69,7 @@ export default {
         gold: "#ff8310",
         chocolate: "#B1835A",
         border1: "#eaeaea",
+        border2: "#022c68",
         inputBg: "#F0F0F5",
         gray2: "#CDCFDD",
         /// my color for all globle bet 

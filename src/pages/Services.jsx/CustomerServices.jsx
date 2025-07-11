@@ -44,11 +44,11 @@ function CustomerServices() {
       <div className='bg-gradient-to-l from-customlightbtn to-customdarkBluebtn'><img src={customerBg} alt="ds" /></div>
       <div className='mt-5 px-5 flex items-center justify-between w-full font-bold text-white'>
         <p>Self Service</p>
-        <button  onClick={() => handlerNavigator(serviceData[0]?.link)} className='px-3 py-1.5 text-xsm rounded-full border-none bg-gradient-to-b from-customlightbtn to-customdarkBluebtn shadow-lg flex items-center justify-center text-white'>My Issue</button>
+        <button  onClick={() => handlerNavigator(serviceData[0]?.link)} className='px-3 py-1.5 text-xsm rounded-full border-none bg-gradient-to-b from-[#7AFEC3] to-[#02AFB6] shadow-lg flex items-center justify-center text-bg5'>My Issue</button>
       </div>
       <div className=' text-xsm px-5'>
         {serviceData?.map((item, i) => (
-          <button onClick={() => handlerNavigator(item?.link)} key={i} className=' py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-white bg-redLight mt-5 border-b-[1px] pb-2 border-gray'>
+          <button onClick={() => handlerNavigator(item?.link)} key={i} className=' py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-[#E3EFFF] bg-redLight1 mt-5 border-b-[1px] pb-2 border-gray'>
             <div className='flex items-center gap-2'>
 
               <div className='rounded-full w-10 h-10 text-white p-1 flex items-center justify-center'>

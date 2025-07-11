@@ -50,7 +50,7 @@ function CollectionRecord() {
     return (
         <div className=" font-roboto">
             {loading && <Loader setLoading={setLoading} loading={loading} />}
-            <header className="py-2 bg-customdarkBlue flex justify-between items-center">
+            <header className="py-2 bg-customdarkBluej flex justify-between items-center">
                 <Link to={-1}>
                     <MdKeyboardArrowLeft className="text-3xl text-white" />
                 </Link>
@@ -62,8 +62,8 @@ function CollectionRecord() {
                     onClick={() => setSelected(12)}
                     className={`w-full px-4 py-2 rounded-md ${
                         selected === 12
-                            ? 'bg-gradient-to-r  from-customlightbtn to-customdarkBluebtn text-white'
-                            : 'bg-customdarkBlue text-gray'
+                            ? 'bg-gradient-to-b  from-[#7AFEC3] to-[#02AFB6] text-bg5'
+                            : 'bg-[#001C54] text-bg6'
                     }`}
                 >
                     Daily
@@ -72,8 +72,8 @@ function CollectionRecord() {
                     onClick={() => setSelected(13)}
                     className={`w-full px-4 py-2 rounded-md ${
                         selected === 13
-                            ? 'bg-gradient-to-r from-customlightbtn to-customdarkBluebtn text-white'
-                            : 'bg-customdarkBlue text-gray'
+                            ? 'bg-gradient-to-b from-[#7AFEC3] to-[#02AFBC] text-bg5'
+                            : 'bg-[#001C54] text-bg6'
                     }`}
                 >
                     Weekly
@@ -82,7 +82,7 @@ function CollectionRecord() {
             <div className="px-2">
                 <table className="w-full mt-10">
                     <thead>
-                        <tr className="text-white font-bold">
+                        <tr className="text-bg7 font-bold">
                             <th className="text-center">Name</th>
                             <th className="text-center">Amount</th>
                             <th className="text-center">Duration</th>
@@ -92,7 +92,7 @@ function CollectionRecord() {
                     <tbody>
                         {data?.length > 0 ? (
                             data.map((item, i) => (
-                                <tr key={i} className="text-white text-xsm bg-customdarkBlue">
+                                <tr key={i} className="text-bg6 text-xsm bg-customdarkBluej">
                                     <td className="text-center py-2">{item?.name}</td>
                                     <td className="text-center">{item?.amount}</td>
                                     <td className="text-center">
@@ -112,7 +112,7 @@ function CollectionRecord() {
                                         className="mx-auto"
                                         style={{ width: '150px' }}
                                     />
-                                    <p className="mt-2 text-gray">No data available</p>
+                                    <p className="mt-2 text-bg7">No data available</p>
                                 </td>
                             </tr>
                         )}

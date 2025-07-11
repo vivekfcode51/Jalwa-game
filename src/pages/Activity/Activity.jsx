@@ -20,7 +20,8 @@ function Activity() {
     setLoading(true)
     try {
       const res = await axios.get(apis.slider)
-      if (res?.data?.success === 200) {
+      console.log("banner data", res);
+      if (res?.data?.data || [].success === 200) {
         setLoading(false)
         setBannerData(res?.data?.data)
       } else {
@@ -58,7 +59,7 @@ function Activity() {
           /></div>
       )}
       <div className="font-roboto w-full pb-20">
-        <div className=" px-3 pb-2 bg-gradient-to-r from-red to-redLight">
+        <div className=" px-3 pb-2 bg-redLight1">
           <h2 className="text-white font-semibold text-lg ">Activity</h2>
           <p className="text-xs pt-5">
             Please remember to follow the event page. <br /> We will launch user feedback
@@ -67,7 +68,7 @@ function Activity() {
         </div>
         {/* Content Section */}
         <div className="p-3">
-          <div className="flex items-center text-lightGray  justify-between mb-6">
+          <div className="flex items-center text-bg6  justify-between mb-6">
             <Link to="/activity/award" className="flex flex-col items-center justify-center">
               <img src={reward} className="h-10 w-10" alt="sd" />
               <p className="text-xs text-center  mt-1">Activity Award</p>
@@ -92,28 +93,28 @@ function Activity() {
 
           {/* Gift and Attendance Bonus Section */}
           <div className="grid grid-cols-2 gap-2.5 mb-6 " >
-            <Link to="/activity/gifts" className="rounded-lg shadow-md bg-[#374992]">
+            <Link to="/activity/gifts" className="rounded-lg shadow-md bg-redLight1">
               <img
                 src={gift_redeem}
 
                 alt="Gifts"
                 className="w-full h-[50%] object-fill rounded"
               />
-              <h3 className="font-bold text-white mt-2 text-sm px-2">Gifts</h3>
-              <p className="text-white text-xs font-light px-2">
+              <h3 className="font-bold text-bg7 mt-2 text-sm px-2">Gifts</h3>
+              <p className="text-bg6 text-xs font-light px-2">
                 Enter the redemption code to receive gift rewards.
               </p>
             </Link>
-            <Link to="/activity/attendance" className=" rounded-lg shadow-md bg-[#374992]">
+            <Link to="/activity/attendance" className=" rounded-lg shadow-md bg-redLight1">
               <img
                 src={sign_in_banner}
                 alt="Attendance Bonus"
                 className="w-full h-[50%] object-fill rounded"
               />
-              <h3 className="font-bold text-white mt-2 text-sm px-2">
+              <h3 className="font-bold text-bg7 mt-2 text-sm px-2">
                 Attendance Bonus
               </h3>
-              <p className="text-white font-light text-xs px-2">
+              <p className="text-bg6 font-light text-xs px-2">
                 The more consecutive days you sign in, the higher the reward will
                 be.
               </p>
@@ -126,7 +127,6 @@ function Activity() {
               <div className="rounded-lg shadow-md bg-bg2 mt-2">
                 <img
                   src={item?.image}
-
                   alt="Gifts"
                   className="w-full h-40 object-fill rounded-lg"
                 />

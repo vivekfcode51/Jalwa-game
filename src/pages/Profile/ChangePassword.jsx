@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaGreaterThan } from 'react-icons/fa';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
-import password from "../../assets/icons/password.png"
+import password from "../../assets/usaAsset/password1.png"
 import apis from '../../utils/apis';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -85,7 +85,7 @@ function ChangePassword() {
                         name="login_password"
                         id="login_password"
                         placeholder="Login Password"
-                        className="bg-redLight text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-gray dark:text-gray text-[15px]"
+                        className="bg-redLight1 text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-[#E3EFFF] dark:text-[#E3EFFF] text-[15px]"
                     />
                     <button
                         type="button"
@@ -111,7 +111,7 @@ function ChangePassword() {
                         name="new_password"
                         id="new_password"
                         placeholder="New login Password"
-                        className="bg-redLight text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-gray dark:text-gray text-[15px]"
+                        className="bg-redLight1 text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-[#E3EFFF] dark:text-[#E3EFFF] text-[15px]"
                     />
                     <button
                         type="button"
@@ -137,7 +137,7 @@ function ChangePassword() {
                         name="password_confirmation"
                         id="password_confirmation"
                         placeholder="New Confirm Password"
-                        className="bg-redLight text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-gray dark:text-gray text-[15px]"
+                        className="bg-redLight1 text-white rounded-md outline-none block w-full p-3.5 dark:placeholder-[#E3EFFF] dark:text-[#E3EFFF] text-[15px]"
                     />
                     <button
                         type="button"
@@ -148,12 +148,12 @@ function ChangePassword() {
                     </button>
                 </div>
                 <Link to="/customerservices" >
-                    <div className='mx-3 text-end flex items-center justify-end gap-2 mt-5 text-xsm text-gray'>
+                    <div className='mx-3 text-end flex items-center justify-end gap-2 mt-5 text-xsm text-bg6'>
                         Contact customer services <FaGreaterThan size={12} />
                     </div>
                 </Link>
                 {/* Save Button */}
-                <button onClick={passwordHandler} className="w-full mt-20 tracking-[2px] bg-gradient-to-b from-customlightbtn to-customdarkBluebtn text-white text-lg font-semibold py-2 rounded-full shadow-md ">
+                <button onClick={passwordHandler} className="w-full mt-20 tracking-[2px] bg-gradient-to-b from-[#7AFEC3] to-[#02AFB6] text-bg5 text-lg font-semibold py-2 rounded-full shadow-md ">
                     Save changes
                 </button>
             </div>

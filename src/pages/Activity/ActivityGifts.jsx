@@ -76,12 +76,12 @@ function ActivityGifts() {
     return (
         <div className='mx-3 font-roboto'>
             {loading && <Loader setLoading={setLoading} loading={loading} />}
-            <div className='bg-customdarkBlue text-sm text-white opacity-80 rounded p-2 mt-60 pb-10'>
-                <p className='text-white opacity-80'>Hi</p>
-                <p className='text-white opacity-80'>We have a gift for you</p>
+            <div className='bg-customdarkBluej text-sm text-white opacity-80 rounded p-2 mt-56 pb-10'>
+                <p className='text-bg6'>Hi</p>
+                <p className='text-bg6'>We have a gift for you</p>
                 <p className='text-white mt-5'>Please enter the gift code below</p>
-                <input onChange={(e) => setGiftCode(e.target.value)} className='w-full outline-none bg-red rounded p-1 mt-3' type="text" placeholder='Please enter gift code' />
-                <button onClick={redeemGift} className='bg-gradient-to-b from-customlightbtn to-customdarkBluebtn text-white rounded-full w-full text-sm py-1.5 mt-5'>Receive</button>
+                <input onChange={(e) => setGiftCode(e.target.value)} className='w-full outline-none bg-bg5 p-3 rounded-[20px] px-4 mt-3 placeholder:text-bg6' type="text" placeholder='Please enter gift code' />
+                <button onClick={redeemGift} className='bg-gradient-to-b from-[#7AFEC3] to-[#02AFB6] text-bg5 rounded-full w-full lg:py-3 text-sm py-1.5 mt-5'>Receive</button>
             </div>
             <div className='mt-3'>
                 <div className='flex mt-10 items-center gap-3  text-white '>
@@ -90,7 +90,7 @@ function ActivityGifts() {
                 </div>
                 <table className='w-full mt-10'>
                     <thead>
-                        <tr className='text-white font-bold text-[13px]'>
+                        <tr className='text-[#E3EFFF] font-bold text-[13px]'>
                             <th className='text-center'>Gift Code</th>
                             <th className='text-center'>Amount</th>
                             <th className='text-center'>Status</th>
@@ -99,7 +99,7 @@ function ActivityGifts() {
                     </thead>
                     <tbody>
                         {redeemedGiftList?.length > 0 ? redeemedGiftList?.map((item, i) => (
-                            <tr key={i} className='text-white text-[12px] bg-customdarkBlue'>
+                            <tr key={i} className='text-bg6 text-[12px] bg-customdarkBluej'>
                                 <td className='text-center py-2'>{item?.gift_code}</td>
                                 <td className='text-center' >{item?.amount}</td>
                                 <td className='text-center'>{item?.status === 1 ? "Redeem" : "Yet to redeem"}</td>

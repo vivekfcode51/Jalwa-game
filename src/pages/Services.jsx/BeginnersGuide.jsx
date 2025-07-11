@@ -23,9 +23,9 @@ function BeginnersGuide() {
     handler()
   }, [])
   return (
-    <div className='text-white opacity-65 p-2 pb-20 text-xs'>
+    <div className='text-bg6 opacity-65 p-2 pb-20 text-xs'>
       {loading && <Loader setLoading={setLoading} loading={loading} />}
-      <h1 className='font-extrabold text-white text-sm text-center py-10'>{data[0]?.name}</h1>
+      <h1 className='font-extrabold text-[#E3EFFF] text-sm text-center py-10'>{data[0]?.name}</h1>
       <div dangerouslySetInnerHTML={{ __html: data[0]?.description }} /></div>
   )
 }

@@ -73,7 +73,7 @@ function ActivityAward() {
   return (
     <div className='pb-10 font-roboto'>
       {loading && <Loader setLoading={setLoading} loading={loading} />}
-      <div className='grid grid-cols-3 bg-gradient-to-l from-red to-redLight py-3 '>
+      <div className='grid grid-cols-3 bg-redLight1 py-3 '>
         <div className='col-span-1'>
           <img
             src={Activitygift}
@@ -82,38 +82,38 @@ function ActivityAward() {
           />
         </div>
         <div className='col-span-2'>
-          <h1 className='font-bold'>Activity Record</h1>
-          <p className='text-xs'>Complete Weekly / Daily tasks to receive rich records.Weekly rewards can&apos;t be accumulated to the next week, and daily rewards cannot be accumulated to the next day.</p>
+          <h1 className='font-bold text-bg7'>Activity Record</h1>
+          <p className='text-xs text-bg6'>Complete Weekly / Daily tasks to receive rich records.Weekly rewards can&apos;t be accumulated to the next week, and daily rewards cannot be accumulated to the next day.</p>
         </div>
       </div>
       {awardData?.data?.length > 0 ? awardData?.data?.map((item, i) => (
-        <div key={i} className=' bg-customdarkBlue mx-3  rounded-md mt-3 pb-3'>
-          <div className='flex items-center justify-between pr-2 border-b-[1px] border-border1 text-sm'>
+        <div key={i} className=' bg-customdarkBluej mx-3  rounded-md mt-3 pb-3'>
+          <div className='flex items-center justify-between pr-2 border-b-[1px] border-border2 text-sm'>
             <button className='bg-green py-2 px-5 rounded-tl-md rounded-br-md capitalize'>{item?.name}</button>
-            <p className=' text-white opacity-40 text-sm'>{item?.status === "0" ? "Finished" : "Unfinished"}</p>
+            <p className=' text-bg7 opacity-40 text-sm'>{item?.status === "0" ? "Finished" : "Unfinished"}</p>
           </div>
           <div className='flex  items-center gap-2 mt-3 px-2'>
             <img className="w-7 h-7" src={bnous1} alt="d" />
-            <p className='text-xs text-white'>lottery betting task</p>
+            <p className='text-xs text-bg7'>lottery betting task</p>
             <p className='text-customred text-sm'>{awardData?.bet_amount > item?.range_amount ? item?.range_amount : awardData?.bet_amount}/{item?.range_amount}</p>
           </div>
           <div className="px-2">
-            <div className='bg-[#374992] rounded-md text-xs text-[#888] p-2'>If your cumulative betting reaches the maximum of 100,000 rupees on that day, you can claim the entire bonus</div>
+            <div className='bg-bg5 rounded-md text-xs text-bg6 p-2'>If your cumulative betting reaches the maximum of 100,000 rupees on that day, you can claim the entire bonus</div>
           </div>
           <div className='flex items-center justify-between text-xs  py-1 px-3'>
-            <div className="text-white opacity-45 ">Award Amount</div>
+            <div className="text-bg7">Award Amount</div>
             <div className='flex items-center gap-2'>
               <img className='w-6 h-6' src={depo_wallet} alt="as" />
               <p className='text-gold text-[16px]'>{item?.amount}</p>
             </div>
           </div>
           <div className="px-4 ">
-            <div className="bg-slate-400 h-[0.1px] w-full ">
+            <div className="bg-border2 h-[0.1px] w-full ">
             </div>
           </div>
 
           <div className='mt-3 px-2'>
-            <button disabled={item?.status === "1" ? true : item?.status === "0" ? true : false} onClick={() => ClaimBonus(item?.activity_id, item?.amount)} className={`text-${item?.status === "1" ? "customlightBlue" :item?.status == "2" ? "green" : "yellow"} rounded-full border-customlightBlue border-[1px] w-full py-0.5 font-bold text-sm`}>{item?.status === "1" ? "to complete" :item?.status == "2" ? "Claim" : "Completed"}</button>
+            <button disabled={item?.status === "1" ? true : item?.status === "0" ? true : false} onClick={() => ClaimBonus(item?.activity_id, item?.amount)} className={`text-${item?.status === "1" ? "bg6" :item?.status == "2" ? "green" : "yellow"} bg-bg5 rounded-full border-border2 border-[1px] w-full py-0.5 font-bold text-sm`}>{item?.status === "1" ? "to complete" :item?.status == "2" ? "Claim" : "Completed"}</button>
           </div>
         </div>
       )) : <p className="text-black flex items-center justify-center mt-20">No data</p>}

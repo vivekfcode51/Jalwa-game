@@ -8,9 +8,9 @@ import apis from '../../utils/apis'
 import { toast } from 'react-toastify'
 import Loader from '../../reusable_component/Loader/Loader'
 import boxBg from "../../assets/usaAsset/boxBg.png"
-import password from "../../assets/usaAsset/password.png"
-import email_tab from "../../assets/usaAsset/email_tab.png"
-import phone from "../../assets/usaAsset/phone.png"
+import password from "../../assets/usaAsset/password1.png"
+import email_tab from "../../assets/usaAsset/email_tab1.png"
+import phone from "../../assets/usaAsset/phone1.png"
 import dialogNickname from "../../assets/usaAsset/dialogNickname.png"
 import close from "../../assets/usaAsset/close.png"
 import copy from "../../assets/usaAsset/copy.png"
@@ -91,21 +91,21 @@ function Setting() {
   return (
     <div className=''>
       {loading && <Loader setLoading={setLoading} loading={loading} />}
-      <div className='bg-customdarkBlue rounded-b-3xl h-40
+      <div className='bg-customdarkBluej rounded-b-3xl h-40
        w-full'>
       </div>
-      <div className='bg-redLight rounded-lg -mt-36 text-white mx-3 p-3'>
+      <div className='bg-[#001C54] rounded-lg -mt-36 text-[#E3EFFF] mx-3 p-3'>
         <div className='flex items-center justify-between'>
           <img src={myDetails?.userimage} className='h-20 w-20 rounded-full' alt="ds" />
-          <Link to="/changeavatar">  <p className='text-white flex items-center'>Change Avatar <MdKeyboardArrowRight
-            className='text-white' size={28} /></p></Link>
+          <Link to="/changeavatar">  <p className='text-bg6 flex items-center'>Change Avatar <MdKeyboardArrowRight
+            className='text-[#E3EFFF]' size={28} /></p></Link>
         </div>
         <button onClick={() => setNicknameModal(true)} className='w-full flex mt-5 border-border1 border-b-[1px] pb-5 items-center justify-between text-xsm'>
-          <p className='text-white'>Nickname</p>
+          <p className='text-bg6'>Nickname</p>
           <p className='flex items-center'>{myDetails?.username} <MdKeyboardArrowRight className='text-lightGray' size={28} /></p>
         </button>
         <div className='flex mt-5 pb-5 items-center justify-between text-xsm'>
-          <p className='text-white'>UID</p>
+          <p className='text-bg6'>UID</p>
           <p className='flex items-center gap-2'>
             {myDetails?.u_id}
             <div className='h-5 w-5' onClick={handleCopyUID}>
@@ -116,12 +116,12 @@ function Setting() {
         </div>
       </div>
       <div className=' mt-5 py-10'>
-        <div className='border-l-4 pl-3 mx-5  font-bold text-white border-redLight'>
+        <div className='border-l-4 pl-3 mx-5  font-bold text-[#E3EFFF] border-redLight'>
           Security Information
         </div>
         <div className='mx-5 '>
           <button className='w-full mt-5 '>
-            <Link to="/changepassword" className='py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-white bg-redLight'>
+            <Link to="/changepassword" className='py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-[#E3EFFF] bg-redLight1'>
               <div className='flex items-center gap-3 ml-2'>
 
                 <div className='h-10 w-10 flex items-center justify-center' style={{
@@ -135,7 +135,7 @@ function Setting() {
                 </div>
                 <p>Login Password</p>
               </div>
-              <p className='flex text-white items-center gap-2'>
+              <p className='flex text-bg6 items-center gap-2'>
                 Edit
                 <MdKeyboardArrowRight
                   size={28} className='text-2xl' />
@@ -143,7 +143,7 @@ function Setting() {
             </Link>
           </button>
           <button className='w-full mt-10'>
-            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-white bg-redLight'>
+            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-[#E3EFFF] bg-redLight1'>
               <div className='flex items-center gap-3'>
               <div className='h-10 w-10 flex items-center justify-center' style={{
                     backgroundImage: `url(${boxBg})`,
@@ -156,7 +156,7 @@ function Setting() {
                 </div>
                 <p>Blind mailbox</p>
               </div>
-              <p className='flex text-white items-center gap-2'>
+              <p className='flex text-bg6 items-center gap-2'>
                 to bind
                 <MdKeyboardArrowRight
                   size={28} className='' />
@@ -164,7 +164,7 @@ function Setting() {
             </Link>
           </button>
           {/* <button className='w-full mt-10'>
-            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-black bg-white'>
+            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-black bg-[#E3EFFF]'>
               <div className='flex items-center gap-3'>
                 <TfiEmail size={20} className='text-redLight' />
                 <p>Google Verification</p>
@@ -177,7 +177,7 @@ function Setting() {
             </Link>
           </button> */}
           <button className='w-full mt-10'>
-            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-white bg-redLight'>
+            <Link to="#" className='pl-2 py-2 rounded-lg  w-full flex items-center justify-between gap-2 text-[#E3EFFF] bg-redLight1'>
               <div className='flex items-center gap-3'>
               <div className='h-10 w-10 flex items-center justify-center' style={{
                     backgroundImage: `url(${boxBg})`,
@@ -190,7 +190,7 @@ function Setting() {
                 </div>
                 <p>Updated version</p>
               </div>
-              <p className='flex text-white items-center gap-2'>
+              <p className='flex text-bg6 items-center gap-2'>
                 1.0.0
                 <MdKeyboardArrowRight
                   size={28} className='' />
@@ -204,10 +204,10 @@ function Setting() {
         <div className="fixed bg-black bg-opacity-50 z-50 transition-opacity  inset-0 flex flex-col items-center justify-center ">
           <div className="h-96 w-[370px] bg-redLight p-2 rounded-lg shadow-lg flex flex-col items-center justify-center">
             <div className='w-full flex items-center justify-center py-3 font-bold px-5'>
-            <div className="bg-gradient-to-r from-white to-transparent rounded-sm transform scale-x-[-1] w-14 h-0.5"></div>
+            <div className="bg-gradient-to-r from-[#E3EFFF] to-transparent rounded-sm transform scale-x-[-1] w-14 h-0.5"></div>
 
               <p className='px-7'>Change Nickname</p>
-              <div className="bg-gradient-to-r to-white from-transparent rounded-sm transform scale-x-[-1] w-14 h-0.5"></div>
+              <div className="bg-gradient-to-r to-[#E3EFFF] from-transparent rounded-sm transform scale-x-[-1] w-14 h-0.5"></div>
               </div>
             <div className='bg-customdarkBlue rounded-lg h-full pt-4 flex flex-col items-center justify-between w-full p-3'>
               <div className='w-full'>
@@ -220,9 +220,9 @@ function Setting() {
                     
                 }}>
                 </div>
-                  <p className='text-white'>Nickname</p>
+                  <p className='text-[#E3EFFF]'>Nickname</p>
                 </div>
-                <div className='text-white bg-red rounded-full pl-6 mt-5 p-3 w-full'>
+                <div className='text-[#E3EFFF] bg-red rounded-full pl-6 mt-5 p-3 w-full'>
                   {!isEditing ? (
                     <div onClick={() => setIsEditing(true)} className="flex items-center gap-2">
                       <p>{myDetails?.username}</p>

@@ -15,9 +15,9 @@ import viptop1 from "../../assets/icons/viptop1.png"
 import viptop2 from "../../assets/icons/viptop2.png"
 import viptick from "../../assets/icons/viptick.png"
 import red_diamond from "../../assets/usaAsset/account/red_diamond.png"
-import vipstarcoin from "../../assets/usaAsset/account/monthlyReward.png"
-import vipGift from "../../assets/usaAsset/account/vipGift.png"
-import rebateRate from "../../assets/usaAsset/account/rebateRate.png"
+import vipstarcoin from "../../assets/usaAsset/account/monthlyReward1.png"
+import vipGift from "../../assets/usaAsset/account/vipGift1.png"
+import rebateRate from "../../assets/usaAsset/account/rebateRate1.png"
 import vipweal from "../../assets/usaAsset/account/red_coins.png"
 import yellowheart from "../../assets/usaAsset/account/yellowHeart.png"
 import depo_wallet from "../../assets/icons/depo_wallet.png"
@@ -203,9 +203,9 @@ function VIP() {
   return (
     <>
     {loading && <Loader setLoading={setLoading} loading={loading} />}
-      <div className='bg-customdarkBlue'>
+      <div className='bg-customdarkBluej'>
         <div className='grid grid-cols-4 px-3 pt-5 pb-14'>
-          <div className='col-span-1 flex items-center  justify-center'>
+          <div className='col-span-1 flex items-center justify-center'>
             <img src={myDetails?.data?.userimage ? myDetails?.data?.userimage : avatar} className='w-20 h-20 rounded-full' alt="not found" />
           </div>
           <div className='col-span-3 flex flex-col items-start justify-start px-2'>
@@ -221,13 +221,13 @@ function VIP() {
         </div>
       </div>
       <div className=" text-white text-xs flex items-center justify-evenly px-3 gap-3 -mt-5">
-        <div className="bg-redLight text-center py-3 shadow-md rounded-lg w-full">
+        <div className="bg-[#001C54] text-center py-3 shadow-md rounded-lg w-full">
           <p className="text-customlightbtn text-sm"> <span className="text-customlightbtn ">{vipLevelData?.my_experience}</span> EXP</p>
-          <p className="text-white">My Experience</p>
+          <p className="text-bg6">My Experience</p>
         </div>
-        <div className="bg-redLight py-3 text-center shadow-md rounded-lg w-full">
-          <p className="text-white text-sm"> <span className="text-customlightbtn ">{vipLevelData?.days_count}</span> Days</p>
-          <p className="text-white">Payout time</p>
+        <div className="bg-[#001C54] py-3 text-center shadow-md rounded-lg w-full">
+          <p className="text-bg6 text-sm"> <span className="text-customlightbtn ">{vipLevelData?.days_count}</span> Days</p>
+          <p className="text-bg6">Payout time</p>
         </div>
       </div>
       <div className="flex justify-center px-3" >
@@ -291,18 +291,18 @@ function VIP() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full bg-redLight shadow-md rounded-lg mt-3 p-2">
+                <div className="w-full bg-redLight1 shadow-md rounded-lg mt-3 p-2">
                   <div className="flex items-center border-customlightbtn border-b-[0.5px] ">
                     <div><img src={red_diamond} className="w-7 h-7" alt="df" /></div>
-                    <div className="w-full font-bold px-2 py-1 text-white">VIP {item?.tag} Benefits level</div>
+                    <div className="w-full font-bold px-2 py-1 text-[#E3EFFF]">VIP {item?.tag} Benefits level</div>
                   </div>
                   <div className="flex items-center gap-2 mt-5 w-full justify-center px-2">
                     <div className="flex w-32 justify-start ">
                       <img className="w-12 h-12" src={vipGift} alt="fd" />
                     </div>
-                    <div className="w-full text-white">
+                    <div className="w-full text-[#E3EFFF]">
                       <p>Level up rewards</p>
-                      <p className="text-xs text-lightGray">Each account can only receive 1 time</p>
+                      <p className="text-xs text-bg6">Each account can only receive 1 time</p>
                     </div>
                     <div className="w-[40%] flex flex-col gap-1 text-orange-400 text-xs">
                       <div className="border-orange-400 border-[0.5px] flex justify-between items-center  rounded-md p-1">
@@ -319,9 +319,9 @@ function VIP() {
                     <div className="flex w-32 justify-start ">
                       <img className="w-12 h-12" src={vipstarcoin} alt="fd" />
                     </div>
-                    <div className="w-full text-white">
+                    <div className="w-full text-[#E3EFFF]">
                       <p>Monthly rewards</p>
-                      <p className="text-xs text-lightGray">Each account can only receive 1 time per month</p>
+                      <p className="text-xs text-bg6">Each account can only receive 1 time per month</p>
                     </div>
                     <div className="w-[40%] text-orange-400 text-xs flex flex-col gap-1 ">
                       <div className="border-orange-400 flex justify-between items-center  rounded-md border-[0.5px] p-1">
@@ -338,9 +338,9 @@ function VIP() {
                     <div className="flex w-32 justify-start ">
                       <img className="w-12 h-12" src={rebateRate} alt="fd" />
                     </div>
-                    <div className="w-full text-white">
+                    <div className="w-full text-[#E3EFFF]">
                       <p>Rebate rate</p>
-                      <p className="text-xs text-lightGray">Increase income of rebate</p>
+                      <p className="text-xs text-bg6">Increase income of rebate</p>
                     </div>
                     <div className="w-[40%] text-customlightbtn text-xs flex flex-col">
                       <div className="border-customlightbtn-redLight flex justify-between items-center  rounded-md border-[0.5px] p-1">
